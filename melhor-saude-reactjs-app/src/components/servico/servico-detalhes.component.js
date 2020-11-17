@@ -19,7 +19,7 @@ function ServicoDetalhes(){
         fetchData();
       }, []);
     return (
-        <div>
+        <div className="container">
         { !isLoading ? 
             (
                 <p>Carregando...</p> 

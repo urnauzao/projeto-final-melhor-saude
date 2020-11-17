@@ -22,7 +22,7 @@ function MedicoDetalhes(){
       }, []);
 
       return(
-        <div>
+        <div className="container">
           { !isLoading ? (
             <p>Carregando...</p>
           ) : (

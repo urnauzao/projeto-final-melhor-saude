@@ -18,7 +18,7 @@ function ClinicasList(){
     }, []);
   
     return(
-      <div>
+      <div className="container">
         { !isLoading ? (
           <p>Carregando...</p>
         ) : (

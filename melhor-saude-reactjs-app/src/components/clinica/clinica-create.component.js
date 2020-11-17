@@ -43,7 +43,7 @@ function ClinicaCreate(){
 
   
     return (
-        <>
+        <div className="container">
         { !isCreated ? (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -143,7 +143,7 @@ function ClinicaCreate(){
             <p>Item Criado com Sucesso</p>
         )
         }
-        </>
+        </div>
     );
 
 }

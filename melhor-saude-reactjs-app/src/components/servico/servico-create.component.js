@@ -49,6 +49,7 @@ export default class ServicoCreate extends Component{
 
     render(){
         return (
+          <div className="container">
             <div className="submit-form">
               {this.state.submitted ? (
                 <div>
@@ -94,6 +95,7 @@ export default class ServicoCreate extends Component{
                 </div>
               )}
             </div>
+          </div>
           );
     }
 }
