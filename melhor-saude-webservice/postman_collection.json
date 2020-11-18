@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "988dbe97-80a5-4ed1-9f27-1a208ee05a8f",
+		"name": "MelhorSaudePHP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clinica",
+			"item": [
+				{
+					"name": "Nova Clinica",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Sorrídents4\",\r\n    \"url_imagem\" : \"https://sorridents.com.br/admin-agendamentos/static/details/16/2806/details_16_33c7719809f31483ee5eaabcb53f41a99.jpg\",\r\n    \"url\" : \"https://sorridents.com.br\",\r\n    \"descricao\" : \"Na Sorridents contamos com atendimento diferenciado oferece tratamentos realizados por clinicos gerais desde implantes, próteses, clareamento, aparelho dental, com atendimento para crianças, adolescentes, adultos e idosos.\",\r\n    \"local_resumido\" : \"Rua José Paulino, 1180, Centro, Campinas, SP, CEP: 13013-001\",\r\n    \"logradouro\" : \"Rua José Paulino\",\r\n    \"endereco\" : \"Rua José Paulino\",\r\n    \"num_endereco\" : \"1180\",\r\n    \"complemento\" : \"\",\r\n    \"cep\" : \"13013-001\",\r\n    \"cidade\" : \"Campinas\",\r\n    \"bairro\" : \"Centro\",\r\n    \"estado\" : \"SP\",\r\n    \"pais\" : \"Brasil\",\r\n    \"rating\" : 4.4,\r\n    \"whatsapp\" : 5511999107905\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/clinica/new",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"clinica",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Clinica por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/clinica/show/1",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"clinica",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/clinica/all",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"clinica",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Medico",
+			"item": [
+				{
+					"name": "Novo Medico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clinica_id\" : 1,\r\n    \"nome\" : \"Renato de Carvalho Najjar\",\r\n    \"idade\" : \"44\",\r\n    \"especializacao\" : \"Odontologia Estética\",\r\n    \"preco_consulta\" : \"100\",\r\n    \"telefone\" : \"(11) 3522-6480\",\r\n    \"email\" : \"wnajjar@gmail.com\",\r\n    \"whatsapp\" : 5511935226480,\r\n    \"foto\" : \"https://s3-sa-east-1.amazonaws.com/doctoralia.com.br/doctor/8f170e/8f170edaec897b2c36cd4f766fe08bf8_large.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/medico/new",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"medico",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Medico por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/medico/show/1",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"medico",
+								"show",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Medico por ID de Clinica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/medico/clinica/1",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"medico",
+								"clinica",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/medico/all",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"medico",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Servico",
+			"item": [
+				{
+					"name": "Novo Servico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Psicóloga\",\r\n    \"lista_clinicas\" : [1,2],\r\n    \"url\": \"https://www.vittude.com/blog/wp-content/uploads/Como-abrir-uma-clínica-de-psicologia-800x457.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/servico/new",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"servico",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Servico Geral",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/servico/show",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"servico",
+								"show"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Servico com Clinica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://melhor-saude-webservice.herokuapp.com/servico/showWithClinicas/",
+							"protocol": "http",
+							"host": [
+								"melhor-saude-webservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"servico",
+								"showWithClinicas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
